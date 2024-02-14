@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin.js");
 const deps = require("./package.json").dependencies;
 
 
@@ -9,12 +9,12 @@ module.exports = merge(common, {
     mode: 'production',
 
     output: {
-        publicPath: "https://mittalankit.github.io/nagp-insurance-detail/",
+        publicPath: "https://mittalankit.github.io/nagp-insurance-renew/",
     },
 
     plugins: [
         new ModuleFederationPlugin({
-          name: "nagp_insurance_detail",
+          name: "nagp_insurance_renew",
           filename: "remoteEntry.js",
           exposes: {},
           shared: {

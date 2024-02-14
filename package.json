@@ -1,5 +1,5 @@
 {
-  "name": "nagp-insurance-detail",
+  "name": "nagp-insurance-renew",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.prod.js",

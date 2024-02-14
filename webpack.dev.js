@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin.js");
 const deps = require("./package.json").dependencies;
 
 module.exports = merge(common, {
@@ -18,7 +18,7 @@ module.exports = merge(common, {
 
     plugins: [
         new ModuleFederationPlugin({
-          name: "Insurance APP",
+          name: "Insurance Renew APP",
           filename: "remoteEntry.js",
           exposes: {},
           shared: {
