@@ -17,9 +17,20 @@ module.exports = merge(common, {
           name: "nagp_insurance_detail",
           filename: "remoteEntry.js",
           exposes: {},
+          shared: {
+            ...deps,
+            react: {
+              singleton: true,
+              requiredVersion: deps.react,
+            },
+            "react-dom": {
+              singleton: true,
+              requiredVersion: deps["react-dom"],
+            },
+          },
         }),
         new HtmlWebPackPlugin({
-          // template: "./src/index.html",
+          template: "./src/index.html",
         }),
       ],
 });
